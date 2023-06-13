@@ -1,27 +1,36 @@
 import { useState } from "react";
 
-export default function SearchBar({onSearch}) {
-   
-   const [id, setId]= useState("");
-   
-   const handleChange = (event)=>{
-      setId(event.target.value)
+export default function SearchBar({ onSearch }) {
+   const [id, setId] = useState("");
+ 
+   //  <input type="search" onChange={handleChange}/>
+   const handleChange = (event) => {
+     //console.log("event ---> ", event.target.value)
+     setId(event.target.value);
+     //  setId((idOld) => idOld + 1);
+     //  setId(id + 1);
    };
-   const add = ()=>{
-      onSearch(id);
-      setId("");
-   }
-
-   const ramdomChar = ()=>{
-      const numRan = Math.floor(Math.random()* 825) + 1;
-      onSearch(numRan)
-   }
+   const add = () => {
+     onSearch(id);
+     setId("");
+   };
+   const randomChar = () => {
+     const numRan = Math.floor(Math.random() * 825) + 1;
+     onSearch(numRan);
+   };
    return (
-      <div>
-          <input type='search' onChange={handleChange} value={id} name="id" placeholder="insert id..."/>
-          <label>insert to id:</label>
-         <button onClick={onSearch}>Agregar</button>
-         <button onClick={ramdomChar}>personaje random</button>
-      </div>
+     // console.log("id--->", id),
+     <div className="search">
+       <label>Insert to Id: </label>
+       <input
+         type="search"
+         onChange={handleChange}
+         value={id}
+         name="id"
+         placeholder="insert id ..."
+       />
+       <button onClick={add}>Agregar</button>
+       <button onClick={randomChar}>Random Character</button>
+     </div>
    );
-}
+ }

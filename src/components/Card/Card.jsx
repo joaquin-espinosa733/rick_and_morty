@@ -1,22 +1,17 @@
 import App from "../../App";
 
 
-export default function Card(props) {
+export default function Card({char, onClose}) { // obj
+   const {id,name,gender,species,origin,image,status} = char
    return (
-      <div>
-         
-         {/* <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/c50a4a55883023.5996f8afa3f5c.gif" alt="" /> */}
-         <div>
+      <div className="card">
          <button onClick={()=>onClose(id)}>X</button>
-         </div>
-         <div>
-         <h2>{props.name}</h2>
-         <h3>{props.status}</h3>
-         <h3>{props.species}</h3>
-         <h3>{props.gender}</h3>
-         <h3>{props.origin}</h3>
-         </div>
-         <img src={props.image} alt='' /> 
+         <h2>{name}</h2>
+         <h2>{status}</h2>
+         <h2>{species}</h2>
+         <h2>{gender}</h2>
+         <h2>{origin?.name}</h2>
+         <img src={image} alt={name} />
       </div>
    );
 }
