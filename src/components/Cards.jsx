@@ -1,17 +1,24 @@
-import Card from './Card';
+import Card from '../components/Card/Card';
 
 export default function Cards({characters, onClose}) {
-   return <div>
-      {
-            characters && characters.map((element)=>{
-                  return <Card key={element.id} characters={element} onClose={onClose}/>
-            })
-      }
-         {/* <h2>{name}</h2>
-         <h2>{status}</h2>
-         <h2>{species}</h2>
-         <h2>{gender}</h2>
-         <h2>{origin}</h2>
-         <img src={image} alt='' /> */}
-   </div>;
+
+   return (
+      <div>
+         {
+            characters.map(character => (
+               <Card
+                  key={character.id}
+                  id={character.id}
+                  name={character.name}
+                  status={character.status}
+                  species={character.species}
+                  gender={character.gender}
+                  origin={character.origin?.name}
+                  image={character.image}
+                  onClose={onClose}
+               />
+            ))
+         }
+      </div>
+   );
 }
