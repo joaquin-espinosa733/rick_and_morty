@@ -1,0 +1,85 @@
+.container {
+    background-color: darkgrey;
+     border-radius: 10px;
+     width: 140px;
+     height: 280px;
+     margin: 20px;
+     padding: 10px;
+     position: relative;
+     perspective: 1000px;
+     box-shadow: 0 0 10px black;
+     &:hover {
+         box-shadow: 0 0 5px blue;
+         transform: rotateY(180deg);
+         transform-style: preserve-3d;
+         transition: all 0.5s linear;
+     }
+ }
+
+ .container img {
+
+     border-radius: 50px;
+     width: 140px;
+     box-shadow: 0 5px 5px black;
+     margin-top: 5px;
+ }
+
+ .boton {
+     display: flex;
+     justify-content: end;
+ }
+
+ .boton button {
+     margin: 2px 2px 0 0;
+     border-radius: 3px;
+     background-color: red;
+     color: blue;
+     box-shadow: 0 2px 2px black;
+     &:hover {
+         background-color: purple;
+         color: pink;
+         box-shadow: 0 2px 2px white;
+     }
+ }
+
+
+ .dataContainer {
+     text-align: center;
+     padding: 5px;
+ }
+
+ .dataContainer h2{
+     margin: 2px;
+     font-size: 12px;
+     color: black;
+ }
+
+ .dataContainer h3{
+     margin: 2px;
+     font-size: 11px;
+     color: purple;
+ }
+
+
+
+
+
+ /* .container-box {
+    margin: 100px;
+    width: 200px;
+    height: 250px;
+    position: relative;
+    perspective: 1000px;
+  }
+
+  .container-box:hover .container {
+      transform: rotateY(180deg);
+  } */
+  /* .cara {
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .cara.detras {
+    transform: rotateY(180deg);
+  } */

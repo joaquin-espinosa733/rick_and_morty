@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
 
-import Cards from "./components/Cards.jsx";
-import NavBar from "./components/NavBar";
+import Cards from "./components/Cards/Cards";
+import NavBar from "./components/Nav/NavBar";
 import axios from "axios";
 
 function App() {
