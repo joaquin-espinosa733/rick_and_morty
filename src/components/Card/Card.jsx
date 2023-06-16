@@ -1,8 +1,16 @@
+// import { useEffect } from "react";
 import style from "../Card/Card.module.css"
 
 
-export default function Card({char, onClose}) { // obj
+export default function Card({char, onClose, seteandoTitle}) { // obj
    const {id,name,gender,species,origin,image,status} = char
+
+   // useEffect(()=>{
+   //    seteandoTitle("jujuuuu el componente Card se ha montado y ya hemos iniciado")
+   // },[])
+   // useEffect(()=>{
+   //     return ()=>{seteandoTitle("jujuuuu el componente Card se ha montado y ya hemos iniciado")}
+   // },[])
    return (
       <div className={style.container}>
          <div className={style.boton}>
@@ -19,9 +27,3 @@ export default function Card({char, onClose}) { // obj
       </div>
    );
 }
-// namePepe: nombre.
-// status: status.
-// species: especie.
-// gender: género.
-// origin: origen (ten en cuenta que el nombre del origen viene dentro de otra propiedad llamada name).
-// image: imagen.
