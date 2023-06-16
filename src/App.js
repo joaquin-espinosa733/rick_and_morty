@@ -6,8 +6,9 @@ import NavBar from "./components/Nav/NavBar";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import Detail from "./components/Detail";
-import About from "./components/About"
-import Login from "./components/Login";
+import About from "./components/about"
+import Login from "./components/login";
+
 
 function App() {
   const [characters, setCharacters] = useState([]);
