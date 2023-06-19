@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import "./login.css";
 
@@ -17,7 +17,7 @@ export default function Login({login}) {
     password: "",
   });
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const validate = (inputs) => {
     const errors = {};
@@ -61,7 +61,7 @@ export default function Login({login}) {
       });
       login(inputs)
   
-      // navigate("/home");
+      navigate("/home");
     } else {
       return alert("Error");
     }
