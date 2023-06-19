@@ -3,15 +3,10 @@ import style from "../Card/Card.module.css"
 import { Link } from "react-router-dom";
 
 
-export default function Card({char, onClose, seteandoTitle}) { // obj
+export default function Card({char, onClose}) { // obj
    const {id,name,gender,species,origin,image,status} = char
 
-   // useEffect(()=>{
-   //    seteandoTitle("jujuuuu el componente Card se ha montado y ya hemos iniciado")
-   // },[])
-   // useEffect(()=>{
-   //     return ()=>{seteandoTitle("jujuuuu el componente Card se ha montado y ya hemos iniciado")}
-   // },[])
+
    return (
       <div className={style.container}>
          <div className={style.boton}>
@@ -20,10 +15,12 @@ export default function Card({char, onClose, seteandoTitle}) { // obj
          <div className={style.dataContainer}>
          <Link to={`/detail/${id}`}>
          <h2>{name}</h2>
+         </Link>
          <h2>{status}</h2>
          <h2>{species}</h2>
          <h2>{gender}</h2>
          <h2>{origin?.name}</h2>
+         <Link>
          <img src={image} alt={name} />
          </Link>
          </div>

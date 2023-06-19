@@ -1,0 +1,26 @@
+.login {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(154, 207, 247);
+    padding: 20px 1px;
+    border-radius: 4px;
+    width: 50%;
+  }
+  
+  .login button {
+    background-color: rgb(61, 166, 246);
+    border: 1.5px rebeccapurple solid;
+    border-radius: 4px;
+    margin: 20px 8px;
+    padding: 8px;
+    cursor: pointer;
+  }
+  .login button:hover {
+    background-color: rgb(91, 179, 247);
+    border: 1.5px rgb(86, 32, 140) solid;
+  }
+  .login span {
+      color: red;
+  }

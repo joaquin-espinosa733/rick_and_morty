@@ -1,22 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 import Cards from "./components/Cards/Cards";
 import NavBar from "./components/Nav/NavBar";
 import axios from "axios";
-import { Routes, Route } from "react-router-dom";
+
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Detail from "./components/Detail";
 import About from "./components/about"
 import Login from "./components/login";
 
 
 function App() {
-  const [characters, setCharacters] = useState([]);
-  // console.log(characters)
-  // const [title, setTitle] = useState("Bienvenidos");
-  // const seteandoTitle = (str)=>{
-  //   setTitle(str)
+  
+  
+  
+  // function logout(){
+  //   setAccess(false);
+  //   navigate("/");
   // }
+  
+  const [characters, setCharacters] = useState([]);
+
 
   function onSearch(id) {
     try {
@@ -42,10 +47,16 @@ function App() {
     const newCharacters = characters.filter((ch) => ch.id !== Number(id));
     setCharacters(newCharacters);
   }
+
+  const {pathname} = useLocation();
+
+
   return (
     <div className="App">
       {/* <h1>{title}</h1> */}
-      <NavBar onSearch={onSearch} />
+      {pathname === "/" ? null : (
+          <NavBar onSearch={onSearch} />
+        )}
       
       
       <Routes>

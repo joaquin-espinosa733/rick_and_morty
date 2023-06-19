@@ -10,9 +10,6 @@
      box-shadow: 0 0 10px black;
      &:hover {
          box-shadow: 0 0 5px blue;
-         transform: rotateY(180deg);
-         transform-style: preserve-3d;
-         transition: all 0.5s linear;
      }
  }
 
