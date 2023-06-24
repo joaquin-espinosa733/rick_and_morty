@@ -5,15 +5,15 @@ import styles from "./NavBar.module.css"
 
 export default function NavBar({onSearch, logout}) {
     return(
-        <div className={styles.nav}>
+        <div className={styles.container}>
             <Link to="/">
-            <button>login in</button>
+            <button onClick={logout} className={styles.inputss}>login in</button>
             </Link>
             <Link to="/home">
             <button>Home</button>
             </Link>
             <Link to="/About">
-            <button>About</button>
+            <button className={styles.inputss}>About</button>
             </Link>
             <SearchBar onSearch={onSearch}/>
         </div>

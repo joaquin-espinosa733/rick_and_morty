@@ -57,6 +57,17 @@
      color: purple;
  }
 
+ .link{
+
+    color: red;
+    border: 20px;
+    &:hover{
+      color: darkslategray;
+      background-color:  whitesmoke;
+      box-shadow: 0 5px 5px white;
+    }
+  }
+
 
 
 

@@ -74,6 +74,7 @@ export default function Login({login}) {
           <h1>Bienvenidos!!!</h1>
           <label>Email: </label>
           <input
+            className="inputsModificados"
             type="text"
             key="email"
             name="email"
@@ -84,6 +85,7 @@ export default function Login({login}) {
           <hr></hr>
           <label>Password: </label>
           <input
+            className="inputsModificados"
             type="password"
             key="password"
             name="password"
@@ -92,9 +94,9 @@ export default function Login({login}) {
           ></input>
           <span>{inputsErrors?.password && inputsErrors.password}</span>
           <hr></hr>
-          {Object.keys(inputsErrors).length === 0 ? (
+          {/* {Object.keys(inputsErrors).length === 0 ? ( */}
             <button type="submit">Ingresar</button>
-          ) : null}
+          {/* // ) : null} */}
         </form>
       </div>
     )

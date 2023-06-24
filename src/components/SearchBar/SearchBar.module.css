@@ -8,8 +8,6 @@
     height: 25px;
     margin-right: 2px;
     border: 50px;
-    &:hover{
-    }
 }
 .container button{
     border-radius: 3px ;
@@ -25,8 +23,9 @@
 }
 
 .container label{
+    padding: 3px;
     color: white;
     background-color: darkslategray;
-    margin: 10px;
+    margin: 60px;
     border-radius: 5px;
 }

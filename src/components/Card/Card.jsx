@@ -13,7 +13,7 @@ export default function Card({char, onClose}) { // obj
          <button onClick={()=>onClose(id)}>X</button>
          </div>
          <div className={style.dataContainer}>
-         <Link to={`/detail/${id}`}>
+         <Link className={style.link} to={`/detail/${id}`}>
          <h2>{name}</h2>
          </Link>
          <h2>{status}</h2>
