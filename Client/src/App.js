@@ -18,11 +18,14 @@ function App() {
   const EMAIL = "eje@gmail.com";
   const PASSWORD = "@123QWEasd";
 
-  function login(inputs) {
-    if (inputs.password === PASSWORD && inputs.email === EMAIL) {
-      setAccess(true);
-      return navigate("/home");
-    }
+  function login(userData) {
+    const { email, password } = userData;
+    const URL = 'http://localhost:3001/rickandmorty/login/';
+    axios(URL + `?email=${email}&password=${password}`).then(({ data }) => {
+       const { access } = data;
+       setAccess(data);
+       access && navigate('/home');
+    });
     // return alert("no es el usuario");
   }
   useEffect(() => {
@@ -60,10 +63,8 @@ function App() {
   }
 
   const { pathname } = useLocation();
-  console.log(":::::", pathname.split("/"));
 
   return (
-    console.log("access <<<>>>>>> ", access),
     (
       <div className="App">
         {/* <h1>{title}</h1> */}
